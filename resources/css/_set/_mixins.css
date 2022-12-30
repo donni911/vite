@@ -1,0 +1,30 @@
+@mixin button($bg: $violet) {
+	background-color: $bg;
+	border-radius: 6px;
+	padding: 12px 36px;
+	font-weight: 500;
+	line-height: 19px;
+	color: $white;
+	display: flex;
+	width: max-content;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: $transition background;
+}
+@mixin hoverButton($bg: $violet) {
+	&:hover,
+	&.active {
+		background: rgba($bg, 0.5);
+	}
+}
+@mixin bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+@mixin absoluteCentering {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

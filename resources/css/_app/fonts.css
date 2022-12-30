@@ -9,6 +9,9 @@
 // 800 – extrabold
 // 900 – black */
 
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+
 @font-face {
     font-family: 'RobotoI';
     font-display: swap;
@@ -22,4 +25,18 @@
     src: local(RobotoI),
         url('../../fonts/Roboto-Bold.woff2') format('woff2');
     font-weight: 700;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+@font-face {
+	font-family: 'RobotoI';
+	font-display: swap;
+	src: local(RobotoI), url('../../fonts/Roboto-Regular.woff2') format('woff2');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'RobotoI';
+	font-display: swap;
+	src: local(RobotoI), url('../../fonts/Roboto-Bold.woff2') format('woff2');
+	font-weight: 700;
 }

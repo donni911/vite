@@ -40,6 +40,7 @@ export default defineConfig({
         alias: {
             '@src': path.resolve(`${config.rootDir}/js@src`),
             '@pub': path.resolve(`${config.rootDir}/js@pub`),
+            '@img': path.resolve(`${config.rootDir}/img`),
         },
     },
     plugins: [

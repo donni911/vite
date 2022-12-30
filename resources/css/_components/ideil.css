@@ -1,20 +1,17 @@
 .c-ideil {
-
-    svg,
-    svg > * {
-        fill: currentColor;
-    }
-
-    svg {
-        flex-shrink: 0;
-        width: 44px;
-        height: auto;
-        margin-top: -2px;
-        margin-left: 7px;
-    }
-
-    &__link {
-        display: flex;
-        align-items: center;
-    }
+	svg,
+	svg > * {
+		fill: currentColor;
+	}
+	svg {
+		flex-shrink: 0;
+		width: 44px;
+		height: auto;
+		margin-top: -2px;
+		margin-left: 7px;
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+	}
 }

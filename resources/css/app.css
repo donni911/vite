@@ -4,6 +4,7 @@
 
 /* Vars */
 @import '_set/vars.css';
+@import '_set/_mixins.css';
 
 /* Base */
 @import '_app/fonts.css';
@@ -25,6 +26,217 @@
 @import '_app/footer.css';
 
 /* Components */
+@import '_components/ideil.css';
+@import '_components/logo.css';
+@import '_components/nav.css';
+@import '_components/socials.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components'; /* Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Vars */
+@import '_set/vars.css';
+@import '_set/_mixins.css';
+
+/* Base */
+@import '_app/fonts.css';
+@import '_app/reset.css';
+@import '_app/icons.css';
+@import '_app/measure.css';
+@import '_app/typography.css';
+
+/* Layouts */
+@import '_layouts/base.css';
+
+/* Form */
+@import '_form/buttons.css';
+@import '_form/forms.css';
+
+/* Parts */
+@import '_app/header.css';
+@import '_app/menu.css';
+@import '_app/footer.css';
+
+/* Components */
+@import '_components/ideil.css';
+@import '_components/nav.css';
+@import '_components/socials.css';
+
+@import '_set/vars.css';
+@import '_set/_mixins.css'; /* Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Vars */
+@import '_set/vars.css';
+@import '_set/_mixins.css';
+
+/* Base */
+@import '_app/fonts.css';
+@import '_app/reset.css';
+@import '_app/icons.css';
+@import '_app/measure.css';
+@import '_app/typography.css';
+
+/* Layouts */
+@import '_layouts/base.css';
+
+/* Form */
+@import '_form/buttons.css';
+@import '_form/forms.css';
+
+/* Parts */
+@import '_app/header.css';
+@import '_app/menu.css';
+@import '_app/footer.css';
+
+/* Components */
+@import '_components/ideil.css';
+@import '_components/logo.css';
+@import '_components/nav.css';
+@import '_components/socials.css';
+
+@import '_app/fonts.css';
+@import '_app/reset.css';
+@import '_app/icons.css';
+@import '_app/measure.css';
+@import '_app/typography.css'; /* Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Vars */
+@import '_set/vars.css';
+@import '_set/_mixins.css';
+
+/* Base */
+@import '_app/fonts.css';
+@import '_app/reset.css';
+@import '_app/icons.css';
+@import '_app/measure.css';
+@import '_app/typography.css';
+
+/* Layouts */
+@import '_layouts/base.css';
+
+/* Form */
+@import '_form/buttons.css';
+@import '_form/forms.css';
+
+/* Parts */
+@import '_app/header.css';
+@import '_app/menu.css';
+@import '_app/footer.css';
+
+/* Components */
+@import '_components/ideil.css';
+@import '_components/logo.css';
+@import '_components/nav.css';
+@import '_components/socials.css';
+
+@import '_layouts/base.css'; /* Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Vars */
+@import '_set/vars.css';
+@import '_set/_mixins.css';
+
+/* Base */
+@import '_app/fonts.css';
+@import '_app/reset.css';
+@import '_app/icons.css';
+@import '_app/measure.css';
+@import '_app/typography.css';
+
+/* Layouts */
+@import '_layouts/base.css';
+
+/* Form */
+@import '_form/buttons.css';
+@import '_form/forms.css';
+
+/* Parts */
+@import '_app/header.css';
+@import '_app/menu.css';
+@import '_app/footer.css';
+
+/* Components */
+@import '_components/ideil.css';
+@import '_components/logo.css';
+@import '_components/nav.css';
+@import '_components/socials.css';
+
+@import '_form/buttons.css';
+@import '_form/forms.css'; /* Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Vars */
+@import '_set/vars.css';
+@import '_set/_mixins.css';
+
+/* Base */
+@import '_app/fonts.css';
+@import '_app/reset.css';
+@import '_app/icons.css';
+@import '_app/measure.css';
+@import '_app/typography.css';
+
+/* Layouts */
+@import '_layouts/base.css';
+
+/* Form */
+@import '_form/buttons.css';
+@import '_form/forms.css';
+
+/* Parts */
+@import '_app/header.css';
+@import '_app/menu.css';
+@import '_app/footer.css';
+
+/* Components */
+@import '_components/ideil.css';
+@import '_components/logo.css';
+@import '_components/nav.css';
+@import '_components/socials.css';
+
+@import '_app/header.css';
+@import '_app/menu.css';
+@import '_app/footer.css'; /* Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Vars */
+@import '_set/vars.css';
+@import '_set/_mixins.css';
+
+/* Base */
+@import '_app/fonts.css';
+@import '_app/reset.css';
+@import '_app/icons.css';
+@import '_app/measure.css';
+@import '_app/typography.css';
+
+/* Layouts */
+@import '_layouts/base.css';
+
+/* Form */
+@import '_form/buttons.css';
+@import '_form/forms.css';
+
+/* Parts */
+@import '_app/header.css';
+@import '_app/menu.css';
+@import '_app/footer.css';
+
+/* Components */
+@import '_components/ideil.css';
+@import '_components/logo.css';
+@import '_components/nav.css';
+@import '_components/socials.css';
+
 @import '_components/ideil.css';
 @import '_components/logo.css';
 @import '_components/nav.css';

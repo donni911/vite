@@ -1,51 +1,104 @@
 :root {
-    color-scheme: dark;
+	color-scheme: dark;
+}
+:focus-visible {
+	outline-color: theme(colors[gray]);
+}
+* {
+	scroll-margin: 72px;
+	transition-duration: var(--transition-duration);
+	transition-timing-function: var(--transition-timing-function);
+	transition-property: none;
+	border-color: theme(colors[gray]);
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: theme(colors[text]);
+	background-color: theme(colors[body]);
+	font-size: theme(fontSize[base]);
+	line-height: theme(lineHeight[normal]);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility !important;
+	padding-top: var(--header-height);
+	font-family: 'Baloo 2', cursive;
+	.is-nospace & {
+		padding-top: 0;
+	}
+	> main {
+		flex-grow: 1;
+	}
+}
+a,
+button {
+	color: currentColor;
+	-webkit-tap-highlight-color: transparent;
+	transition-property: border-color, background-color, color, opacity;
+	&:hover {
+		opacity: 0.6;
+	}
 }
 
-:focus-visible {
-    outline-color: theme(colors[gray]);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 47px;
+	color: $white;
+	text-align: center;
+	opacity: 1;
+	transition: opacity theme(transitions[sm]);
 }
 
 * {
-    scroll-margin: 72px;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
-    transition-property: none;
-    border-color: theme(colors[gray]);
+	box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+img {
+	max-width: 100%;
+	height: auto;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    color: theme(colors[text]);
-    background-color: theme(colors[body]);
-    font-size: theme(fontSize[base]);
-    line-height: theme(lineHeight[normal]);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility !important;
-    padding-top: var(--header-height);
-
-    .is-nospace & {
-        padding-top: 0;
-    }
-
-    > main {
-        flex-grow: 1;
-    }
-}
-
-a,
+input,
 button {
-    color: currentColor;
-    -webkit-tap-highlight-color: transparent;
-    transition-property: border-color, background-color, color, opacity;
+	border: none;
+	background: none;
+	outline: none;
+	font-size: 1rem;
+	color: theme(colors[text]);
+	padding: 0;
+	margin: 0;
+}
 
-    &:hover {
-        opacity: .6;
-    }
+a {
+	color: theme(colors[text]);
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 1420px;
+	margin: 0 auto;
 }

@@ -60,6 +60,7 @@ Thumbs.db
 ## Project files
 /vendor
 node_modules
+/node_modules
 /static/content
 /static/uploads
 /storage/framework/messages/

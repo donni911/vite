@@ -42,6 +42,9 @@ module.exports = {
             '11xl': '7.5rem', // 120px
         },
         extend: {
+            transitions: {
+                'sm':'0.25s'
+            },
             colors: {
                 'black': '#000000',
                 'white': '#ffffff',
@@ -55,8 +58,10 @@ module.exports = {
 
                 'primary': '#e4ff3c',
 
-                'body': '#000000',
-                'text': '#ffffff',
+                'accent': '#F9D44A',
+
+                'body': '#F2F8FD',
+                'text': '#18333E',
             },
             maxWidth: {
                 'xs': '480px',

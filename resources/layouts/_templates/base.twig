@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="uk" class="{{ htmlClass }}">
+	{% include '../_app/head.twig' %}
 
-{% include '../_app/head.twig' %}
+	<body class="{{ bodyClass }}">
+		<main class="{{ mainClass }}">
+			{% include '../_app/header.twig' %}
+			{% block content %}
 
-<body class="{{ bodyClass }}">
-    {% include '../_app/header.twig' %}
-    {% include '../_app/menu.twig' %}
+			{% endblock %}
+		</main>
 
-    <main class="{{ mainClass }}">
-        {% block content %}{% endblock %}
-    </main>
+		{% include '../_components/modals.twig' %}
+		{% include '../_components/tooltips.twig' %}
 
-    {% include '../_app/footer.twig' %}
-
-    {# {% include '../_app/cookies.twig' %} #}
-
-    {% include '../_components/modals.twig' %}
-    {% include '../_components/tooltips.twig' %}
-
-    {{ additionalScripts }}
-</body>
-
+		{{ additionalScripts }}
+	</body>
 </html>
