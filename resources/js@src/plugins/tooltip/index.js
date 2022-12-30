@@ -4,17 +4,17 @@ import getElement from '@src/helpers/getElement';
 
 export default class Tooltip {
     init() {
-        const showEvents = [ 'mouseenter', 'focus' ];
-        const hideEvents = [ 'mouseleave', 'blur' ];
+        const showEvents = ['mouseenter', 'focus'];
+        const hideEvents = ['mouseleave', 'blur'];
 
         this.spacer = 10;
 
-        showEvents.forEach(event => {
+        showEvents.forEach((event) => {
             this.targetEl.addEventListener(event, () => {
                 this.show();
             });
         });
-        hideEvents.forEach(event => {
+        hideEvents.forEach((event) => {
             this.targetEl.addEventListener(event, () => {
                 this.hide();
             });
@@ -28,11 +28,11 @@ export default class Tooltip {
         this.placement = placement;
 
         if (!this.targetEl) {
-            throw new Error(`Tooltip target element ${ targetEl } doesn't exist.`);
+            throw new Error(`Tooltip target element ${targetEl} doesn't exist.`);
         }
 
         if (!this.tooltipEl) {
-            throw new Error(`Tooltip element ${ tooltipEl } doesn't exist.`);
+            throw new Error(`Tooltip element ${tooltipEl} doesn't exist.`);
         }
 
         this.arrowEl = this.tooltipEl.querySelector('.c-tooltip__arrow');
@@ -59,15 +59,12 @@ export default class Tooltip {
             middleware,
         }).then(({ x: tooltipX, y: tooltipY, placement, middlewareData }) => {
             Object.assign(this.tooltipEl.style, {
-                left: `${ tooltipX }px`,
-                top: `${ tooltipY }px`,
+                left: `${tooltipX}px`,
+                top: `${tooltipY}px`,
             });
 
             if (this.arrowEl) {
-                const {
-                    x: arrowX,
-                    y: arrowY,
-                } = middlewareData.arrow;
+                const { x: arrowX, y: arrowY } = middlewareData.arrow;
                 const staticSide = {
                     top: 'bottom',
                     right: 'left',
@@ -76,11 +73,11 @@ export default class Tooltip {
                 }[placement.split('-')[0]];
 
                 Object.assign(this.arrowEl.style, {
-                    left: arrowX ? `${ arrowX }px` : '',
-                    top: arrowY ? `${ arrowY }px` : '',
+                    left: arrowX ? `${arrowX}px` : '',
+                    top: arrowY ? `${arrowY}px` : '',
                     right: '',
                     bottom: '',
-                    [staticSide]: `${ this.arrowEl.offsetHeight / -2 }px`,
+                    [staticSide]: `${this.arrowEl.offsetHeight / -2}px`,
                 });
             }
         });

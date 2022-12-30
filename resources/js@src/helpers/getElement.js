@@ -1,6 +1,6 @@
 import isElement from '@src/helpers/isElement';
 
-export default obj => {
+export default (obj) => {
     if (isElement(obj)) {
         return obj;
     }
