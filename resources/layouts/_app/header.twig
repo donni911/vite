@@ -4,16 +4,58 @@
 			{% include '../_components/logo.twig' %}
 		</div>
 
-		<div class="c-header__main">
+		<div class="c-header__main sm:flex hidden">
 			<div class="c-search">
 				<div class='c-search__icon'>
 					{% include '../_components/icon.twig' with {
 						icon: 'search-normal',
-        			} %}
+        				} 
+					%}
 				</div>
 				<input type="text" placeholder='Search for places' class='c-search__input'>
 			</div>
-			{% include '../_components/socials.twig' %}
+			<button class="c-btn c-btn--icon c-filter__btn">
+				{% include '../_components/icon.twig' with {
+						icon: 'setting',
+						class:'c-icon-w-xl c-icon--primary',
+        				} 
+					%}
+			</button>
 		</div>
+
+		<div class="c-header__info">
+			<div class="hidden lg:flex">
+				<button class="c-location flex items-center ">
+
+					{% include '../_components/icon.twig' with {
+						icon: 'location',
+						class: 'hidden xl:block'
+        				} 
+					%}
+
+					<span class='c-location__title'>New York / Dc</span>
+				</button>
+				<button class='c-btn c-btn--icon c-notification c-notification--active'>
+					{% include '../_components/icon.twig' with {
+						icon: 'notification-bing',
+						class:'c-icon-w-xl c-btn--border',
+        				} 
+					%}
+				</button>
+				<a href="#" class='c-account__btn'>
+					{% include '../_components/img.twig' with {
+							img:'cards/avatar.webp',
+							alt:'avatar',
+						}
+					%}
+				</a>
+			</div>
+			<button class="c-burger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+
 	</nav>
 </header>

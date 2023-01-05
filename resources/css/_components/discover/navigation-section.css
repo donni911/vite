@@ -1,0 +1,96 @@
+.c-navigation {
+	display: none;
+
+	@screen lg {
+		width: 15%;
+		display: block;
+	}
+
+	&__item {
+		padding: 20px 0px;
+		position: relative;
+		margin: 15px 0px;
+	}
+
+	&__logout {
+		display: flex;
+		align-items: center;
+
+		font-weight: 500;
+
+		margin-top: 200px;
+		.c-icon {
+			margin-right: 15px;
+		}
+	}
+}
+
+.c-navigation__btn {
+	display: flex;
+	align-items: center;
+
+	font-weight: 500;
+
+	.c-icon {
+		margin-right: 15px;
+		isolation: isolate;
+		z-index: 10;
+
+		transition: 0.3s ease margin;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+
+		background-color: theme(colors[gray]);
+		pointer-events: none;
+		transition: right 0.3s ease, opacity 0.3s ease;
+		opacity: 0;
+
+		/* top: 0;
+		right: 100%;
+		border-radius: 0px 30px 30px 0px;
+		height: 100%;
+		width: 100%; */
+
+		/* @screen 2xl { */
+		top: 50%;
+		left: -13px;
+		right: 0;
+		border-radius: 30px;
+		width: 50px;
+		height: 50px;
+
+		transform: translateY(-50%);
+		/* } */
+	}
+	&.active {
+		&::before {
+			right: calc(100% - 55px);
+			background-color: theme(colors[accent]);
+			opacity: 1;
+		}
+		.c-icon {
+			margin-right: 25px;
+		}
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			&::before {
+				right: calc(100% - 55px);
+				opacity: 1;
+			}
+			.c-icon {
+				margin-right: 25px;
+			}
+		}
+	}
+}

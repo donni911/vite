@@ -1,0 +1,122 @@
+.c-cards {
+	display: flex;
+
+	flex-direction: column;
+	row-gap: 20px;
+
+	@screen sm {
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-right: -10px;
+		margin-left: -10px;
+		row-gap: 0px;
+	}
+
+	@screen xl {
+		flex-wrap: nowrap;
+	}
+}
+
+.c-card {
+	width: 100%;
+
+	@screen sm {
+		padding: 0px 10px 30px 10px;
+		width: 50%;
+	}
+
+	@screen md {
+		width: 50%;
+	}
+
+	@screen xl {
+		width: 33.33334%;
+	}
+
+	&__img {
+		width: auto;
+		height: 320px;
+
+		position: relative;
+
+		border-radius: 30px;
+		overflow: auto;
+
+		cursor: pointer;
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
+	&__favourite {
+		position: absolute;
+		top: 25px;
+		right: 30px;
+
+		.c-icon {
+			border: 0;
+			background-color: theme(colors[btn-tr]);
+		}
+
+		svg path {
+			fill: theme(colors[btn]);
+			will-change: fill;
+			transition: theme(transitions[sm]) fill;
+		}
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				svg path {
+					fill: theme(colors[red]);
+				}
+			}
+		}
+	}
+
+	&__info {
+		@screen md-max {
+			display: flex;
+			padding-top: 10px;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@screen md {
+			padding-top: 20px;
+		}
+
+		.c-icon {
+			margin-right: 10px;
+		}
+
+		.c-title {
+			margin-bottom: 15px;
+		}
+
+		.c-location__title,
+		.c-rate__description {
+			color: theme(colors[text-o]);
+			line-height: 1.5rem;
+			font-weight: 500;
+		}
+	}
+
+	.c-location {
+		margin-right: 20px;
+	}
+}
+
+.c-rate {
+	display: flex;
+	align-items: center;
+
+	.c-icon {
+		svg {
+			filter: drop-shadow(0px 5px 10px rgba(254, 198, 92, 0.4));
+		}
+	}
+}

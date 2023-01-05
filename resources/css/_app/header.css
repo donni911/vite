@@ -1,7 +1,7 @@
 .c-header {
-	position: fixed;
+	/* position: fixed;
 	top: 0;
-	left: 0;
+	left: 0; */
 	width: 100%;
 	z-index: theme(zIndex.20);
 	line-height: 1;
@@ -41,24 +41,137 @@
 	&__inner {
 		display: flex;
 		align-items: flex-end;
-		padding-top: 10px;
-		padding-bottom: 20px;
+		padding-top: 25px;
+		padding-bottom: 25px;
 	}
 
 	&__main {
+		width: 75%;
+
+		@screen lg {
+			width: 55%;
+		}
+
 		flex-grow: 1;
 		display: flex;
 		align-items: center;
+
+		.c-filter__btn {
+			margin: 0 15px;
+
+			@screen lg {
+				margin-left: 60px;
+				margin-right: 75px;
+			}
+		}
 	}
 
 	&__logo {
-		width: 100px;
-		margin-right: 32px;
+		width: 15%;
+
+		margin-right: auto;
+		padding-right: 32px;
+
 		align-self: center;
 		transition-property: width, padding;
 
-		@screen xl {
-			margin-right: 60px;
+		position: relative;
+
+		.c-logo {
+			width: 70px;
+
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__info {
+		width: auto;
+
+		@screen lg {
+			width: 30%;
+		}
+		display: flex;
+
+		position: relative;
+
+		margin: auto 0;
+
+		@screen lg {
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				left: 0%;
+				top: 50%;
+
+				height: 40px;
+				width: 1px;
+
+				background-color: theme(colors[gray]);
+
+				transform: translate(0%, -50%);
+			}
+		}
+
+		.c-location {
+			margin-left: 35px;
+			margin-right: auto;
+
+			.c-icon {
+				margin-right: 15px;
+			}
+
+			&__title {
+				font-weight: 500;
+			}
+		}
+
+		.c-notification {
+			margin: 0px 15px;
+
+			&--active {
+				position: relative;
+
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						&::before {
+							transform: translate(3px, 3px);
+						}
+					}
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: -5px;
+					right: -5px;
+
+					width: 10px;
+					height: 10px;
+
+					border-radius: 30px;
+
+					background-color: theme(colors[red]);
+
+					will-change: transform;
+					transition: theme(transitions[sm]) transform;
+				}
+			}
+		}
+
+		.c-account__btn {
+			border-radius: 30px;
+			display: inline-block;
+			overflow: hidden;
+
+			margin-left: 15px;
+
+			width: 53px;
+			height: 53px;
+
+			flex-shrink: 0;
 		}
 	}
 
@@ -122,6 +235,71 @@
 						transform: rotate(45deg);
 					}
 				}
+			}
+		}
+	}
+}
+
+.c-search {
+	width: 100%;
+	position: relative;
+
+	&__input {
+		width: 100%;
+		background-color: theme(colors[gray-light]);
+		padding: 14px 18px;
+		padding-left: 55px;
+
+		border-radius: 30px;
+	}
+
+	&__icon {
+		content: '';
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 18px;
+	}
+}
+
+.c-burger {
+	@screen lg {
+		display: none;
+	}
+
+	position: relative;
+
+	margin: auto 0;
+
+	width: 30px;
+	height: 30px;
+	flex-shrink: 0;
+
+	span {
+		display: block;
+		width: 100%;
+		height: 3px;
+		border-radius: 2px;
+		transition: transform theme(transitions[sm]);
+		background-color: theme(colors[btn]);
+		will-change: transform;
+
+		&:nth-child(2) {
+			margin: 5px 0;
+			transform-origin: center;
+		}
+	}
+
+	&.active {
+		span {
+			&:first-child {
+				transform: rotate(-45deg) translate(-5px, 5px);
+			}
+			&:nth-child(2) {
+				transform: rotate(45deg);
+			}
+			&:last-child {
+				transform: scaleX(0);
 			}
 		}
 	}

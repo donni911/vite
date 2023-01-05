@@ -1,0 +1,26 @@
+[
+	{
+		"id": "1",
+		"img": "card-v-1.jpg",
+		"title": "Moonlight Night",
+		"rate": "4.7",
+		"country": "Canada",
+		"isFavourite": false
+	},
+	{
+		"id": "2",
+		"img": "card-v-2.jpg",
+		"title": "Sahara Desert",
+		"rate": "4.9",
+		"country": "Africa",
+		"isFavourite": true
+	},
+	{
+		"id": "3",
+		"img": "card-v-3.jpg",
+		"title": "New York",
+		"rate": "5.0",
+		"country": "Africa",
+		"isFavourite": false
+	}
+]

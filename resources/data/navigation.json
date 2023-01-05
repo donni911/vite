@@ -1,0 +1,50 @@
+[
+	{
+		"id": "dashboard",
+		"link": "#",
+		"title": "Dashboard",
+		"icon": "home"
+	},
+	{
+		"id": "notes",
+		"link": "#",
+		"title": "Note’s",
+		"icon": "note-2"
+	},
+	{
+		"id": "theme",
+		"link": "#",
+		"title": "Theme",
+		"icon": "moon"
+	},
+	{
+		"id": "account",
+		"link": "#",
+		"title": "Account",
+		"icon": "profile-2user"
+	},
+	{
+		"id": "explore",
+		"link": "#",
+		"title": "Explore",
+		"icon": "microscope"
+	},
+	{
+		"id": "graph",
+		"link": "#",
+		"title": "Graph",
+		"icon": "graph"
+	},
+	{
+		"id": "messages",
+		"link": "#",
+		"title": "Messages",
+		"icon": "sms-edit"
+	},
+	{
+		"id": "setting",
+		"link": "#",
+		"title": "Setting",
+		"icon": "setting-2"
+	}
+]

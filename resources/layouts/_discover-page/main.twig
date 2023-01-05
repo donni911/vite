@@ -1,0 +1,75 @@
+<section class='c-main'>
+	<div class="c-main__section">
+		<h3 class='c-title c-title--3'>Discover World</h3>
+		<div class='c-tabs'>
+			<ul class='c-tabs__list'>
+				{% for tab in discoverTabs %}
+					<li id='{{ tab.id }}' class="c-tabs__item {% if tab.isActive %} is-active {% endif %}">{{ tab.title  }}</li>
+				{% endfor %}
+			</ul>
+			<div class='c-tabs__content'>
+				<div class="c-cards">
+
+					{% for card in cards %}
+						<article class="c-card" id='{{ card.id }}'>
+							<div class="c-card__img">
+								{% include '../_components/img.twig' with {
+								img: 'cards/' ~ card.img,
+								alt: card.title,
+									}
+								%}
+								<button class="c-btn c-btn--icon c-card__favourite">
+									{% include '../_components/icon.twig' with {
+									icon: 'heart',
+									class:'c-icon-w-xl c-btn--border',
+									} 
+								%}
+								</button>
+							</div>
+							<div class="c-card__info">
+								<h5 class="c-title c-title--5">{{ card.title }}</h5>
+								<div class="flex">
+									<div class="c-location flex items-center ">
+										{% include '../_components/icon.twig' with {
+									icon: 'location',
+									} 
+								%}
+										<span class='c-location__title'>{{ card.country }}</span>
+									</div>
+									<div class="c-rate">
+										{% include '../_components/icon.twig' with {
+											icon: 'star',
+											} 
+										%}
+										<span class='c-rate__description'>{{ card.rate }}</span>
+									</div>
+								</div>
+							</div>
+						</article>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c-main__section">
+		<div class="flex items-center">
+			<h3 class='c-title c-title--3'>Event Dates</h3>
+			<button class='c-btn c-btn--border ml-auto'>
+				January 15-2022
+			</button>
+		</div>
+
+		<div class="c-calendar">
+			<ul class="c-calendar__list">
+				{% for day in days %}
+					<li class="c-calendar__item">
+						<span class="c-calendar__weekday"></span>
+						<span class="c-calendar__spacer"></span>
+						<span class="c-calendar__day"></span>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+	</div>
+</section>

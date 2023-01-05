@@ -1,56 +1,79 @@
 .c-tabs {
-    position: relative;
-    display: inline-flex;
-    vertical-align: middle;
-    min-width: 0;
-    flex-shrink: 0;
-    max-width: 100%;
-    line-height: 22px;
+	position: relative;
+	display: inline-flex;
+	vertical-align: middle;
+	flex-direction: column;
+	min-width: 0;
+	flex-shrink: 0;
+	max-width: 100%;
+	line-height: 22px;
 
-    &__list {
-        white-space: nowrap;
-        flex-grow: 1;
-        display: flex;
-    }
+	margin-top: 18px;
 
-    &__item {
-        display: flex;
-        align-items: center;
+	width: 100%;
 
-        &:not(:last-child) {
-            margin-right: 12px;
-        }
+	&__list {
+		white-space: nowrap;
+		flex-grow: 1;
+		display: flex;
+		overflow-y: hidden;
 
-        &.is-active {
-            pointer-events: none;
-        }
-    }
+		@screen sm-max {
+			justify-content: space-between;
+		}
+	}
 
-    &__link {
-        background-color: theme(colors[white]);
-        color: theme(colors[black]);
-        display: flex;
-        font-weight: 700;
-        gap: 8px;
-        height: 44px;
-        padding: 0 20px;
-        align-items: center;
-        border-radius: 99px;
+	&__item {
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+		cursor: pointer;
 
-        &:hover {
-            background-color: theme(colors[primary]);
-            color: theme(colors[black]);
-        }
+		transition: theme(transitions[sm]) color;
 
-        .c-tabs__item.is-active & {
-            background-color: theme(colors[primary]);
-            color: theme(colors[black]);
-        }
-    }
+		&:hover {
+			color: theme(colors[accent]);
+		}
 
-    &__count {
-        color: theme(colors[black]);
-        font-weight: 400;
-        transition-property: color;
-    }
+		&:not(:last-child) {
+			margin-right: 20px;
+
+			@screen sm {
+				margin-right: 55px;
+			}
+		}
+
+		&.is-active {
+			pointer-events: none;
+			color: theme(colors[accent]);
+		}
+	}
+
+	&__link {
+		background-color: theme(colors[white]);
+		color: theme(colors[black]);
+		display: flex;
+		font-weight: 700;
+		gap: 8px;
+		height: 44px;
+		padding: 0 20px;
+		align-items: center;
+		border-radius: 99px;
+
+		&:hover {
+			background-color: theme(colors[primary]);
+			color: theme(colors[black]);
+		}
+
+		.c-tabs__item.is-active & {
+			background-color: theme(colors[primary]);
+			color: theme(colors[black]);
+		}
+	}
+
+	&__count {
+		color: theme(colors[black]);
+		font-weight: 400;
+		transition-property: color;
+	}
 }

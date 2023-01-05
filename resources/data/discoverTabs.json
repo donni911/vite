@@ -1,0 +1,17 @@
+[
+	{
+		"id": "recommended-tab",
+		"title": "Recommended",
+		"isActive": false
+	},
+	{
+		"id": "popular-tab",
+		"title": "Popular Places",
+		"isActive": true
+	},
+	{
+		"id": "trips-tab",
+		"title": "Trip’s",
+		"isActive": false
+	}
+]

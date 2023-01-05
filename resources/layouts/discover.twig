@@ -6,7 +6,11 @@
 {% set htmlClass = 'is-nospace' %}
 
 {% block content %}
-	<section>
-		HW
-	</section>
+	<main class='c-discover'>
+		<div class="c-discover__inner l-box">
+			{% include "./_discover-page/navigation.twig" %}
+			{% include "./_discover-page/main.twig" %}
+			{% include "./_discover-page/content.twig" %}
+		</div>
+	</main>
 {% endblock %}

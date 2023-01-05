@@ -1,20 +1,49 @@
 .i-icon {
-    pointer-events: none;
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-    display: inline-block;
-    vertical-align: middle;
-    fill: currentColor;
+	pointer-events: none;
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+	display: inline-block;
+	vertical-align: middle;
+	fill: currentColor;
 }
 .i-icon--left {
-    transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 .i-icon--top {
-    transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 .i-icon--right {
 }
 .i-icon--bottom {
-    transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.c-icon {
+	svg {
+		width: 24px;
+		height: 24px;
+
+		flex-shrink: 0;
+	}
+
+	&-w-lg {
+		padding: 7px;
+		border-radius: 30px;
+	}
+
+	&-w-xl {
+		width: 53px;
+		height: 53px;
+
+		border-radius: 30px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&--primary {
+		background-color: theme(colors[btn]);
+	}
 }

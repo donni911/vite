@@ -83,5 +83,41 @@
 	}
 }
 .c-btn {
-	@include button;
+	padding: 10px 30px;
+	border-radius: 30px;
+
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.5rem;
+
+	&--border {
+		border: 1px solid theme(colors[gray]);
+
+		&:hover {
+			background-color: theme(colors[accent]);
+			border-color: theme(colors[accent]);
+			color: white;
+		}
+	}
+
+	&--icon {
+		will-change: transform;
+		transition: transform theme(transitions[sm]);
+		padding: 0;
+
+		svg {
+			will-change: transform;
+			transition: transform theme(transitions[sm]);
+		}
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: scale(1.1);
+
+				svg {
+					transform: scale(0.8);
+				}
+			}
+		}
+	}
 }

@@ -1,0 +1,7 @@
+.c-content {
+	width: 100%;
+
+	@screen lg {
+		width: 30%;
+	}
+}

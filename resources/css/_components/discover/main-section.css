@@ -1,0 +1,16 @@
+.c-main {
+	width: 100%;
+
+	@screen lg {
+		width: 55%;
+		padding-right: 75px;
+	}
+
+	.c-tabs__content {
+		padding: 20px 0px;
+
+		@screen sm {
+			padding: 40px 0px;
+		}
+	}
+}

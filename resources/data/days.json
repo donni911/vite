@@ -1,0 +1,14 @@
+[
+	{
+		"weekday": "Monday",
+		"day": "12"
+	},
+	{
+		"id": "popular-tab",
+		"title": "Popular Places"
+	},
+	{
+		"id": "trips-tab",
+		"title": "Trip’s"
+	}
+]

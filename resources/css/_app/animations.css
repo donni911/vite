@@ -1,0 +1,17 @@
+@keyframes jump {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	25% {
+		transform: translate(-3px, -3px);
+	}
+	50% {
+		transform: translate(0px, 6px);
+	}
+	75% {
+		transform: translate(3px, 3px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
+}

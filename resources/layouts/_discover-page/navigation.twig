@@ -1,0 +1,25 @@
+<aside class="c-navigation">
+	<ul class="c-navigation__list">
+		{% for item in navigation %}
+			<li class="c-navigation__item">
+				<button class="c-navigation__btn {% if loop.first %} active {% endif %}">
+					{% include '../_components/icon.twig' with {
+						    icon: item.icon,
+                            } 
+                        %}
+					<span class='text-left'>{{ item.title }}</span>
+				</button>
+			</li>
+		{% endfor %}
+		<li class="c-navigation__item">
+
+			<button class="c-navigation__logout">
+				{% include '../_components/icon.twig' with {
+			icon: 'logout',
+			} 
+		%}
+				<span class='text-left'>Sign Out</span>
+			</button>
+		</li>
+	</ul>
+</aside>
